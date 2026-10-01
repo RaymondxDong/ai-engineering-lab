@@ -20,7 +20,9 @@ try:
         model="gpt-5-mini",
         input=question,
     )
-
+    print("Response ID:", response.id)
+    print("Model:", response.model)
+    print("Usage:", response.usage)
     print("AI:", response.output_text)
 
 except RateLimitError:
